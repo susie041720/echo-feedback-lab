@@ -5,7 +5,7 @@ import hashlib, json
 from pathlib import Path
 CONFIG=json.loads((Path(__file__).parent/'config/air_fryer.json').read_text())
 AGGREGATION_CONFIG=json.loads((Path(__file__).parent/'config/core_findings.json').read_text())
-VERSION='themes-4.1-explicit-alias'
+VERSION='themes-4.2-canonical-topics'
 CATEGORIES={k:(v['name'],[]) for k,v in CONFIG['categories'].items()}
 BEHAVIOR_THEMES={'product-return':'退货','return':'退货','return-action':'退货','recommendation-intent':'推荐','product-recommendation':'推荐','repurchase-intent':'复购','purchase-intent':'继续购买'}
 BEHAVIOR_THEMES.update({'oven-replacement-intent':'替代烤箱意向','dehydrating-function-intent':'尝试脱水意向','continued-experimentation':'继续尝试意向','kitchen-experimentation-expectation':'厨房尝试意向','future-cooking-use':'未来烹饪用途意向','cooking-use-frequency':'日常使用行为','appliance-preference':'日常使用偏好'})
@@ -18,11 +18,33 @@ def category(a):
     # No inference from a noun such as "basket" or from the legacy topic name.
     return a.get('major_category') if a.get('major_category') in CATEGORIES else 'other'
 
+def normalize_topic(aspect):
+    """Derived labels only. Preserve evidence, polarity, kind and experience.
+    Explicit scope aliases take precedence over an overloaded legacy theme key.
+    No inference from food nouns, ratings or similarly spelled labels.
+    """
+    a=dict(aspect)
+    key=a.get('theme_key','')
+    key=AGGREGATION_CONFIG.get('theme_aliases',{}).get(key,key)
+    if a.get('feedback_kind')=='整体评价':
+        a.update(topic=AGGREGATION_CONFIG.get('overall_topic','整体评价'),theme_key='overall-evaluation')
+        return a
+    if a.get('feedback_kind') in ['产品反馈','用途描述']:
+        key=AGGREGATION_CONFIG.get('topic_aliases',{}).get(a.get('topic'),key)
+        if key=='cooking-fit' and a.get('feedback_kind')=='用途描述':key='cooking-use-range'
+    definition=CONFIG['themes'].get(key,{})
+    title=AGGREGATION_CONFIG.get('display_topics',{}).get(key)
+    if not title and definition.get('category')==category(a):title=definition['name']
+    a['theme_key']=key
+    if key=='cooking-use-range':a['major_category']='cooking'
+    if title:a['topic']=title
+    return a
+
 def semantic(a,cat):
-    key=a.get('theme_key','');key=AGGREGATION_CONFIG.get('theme_aliases',{}).get(key,key);definition=CONFIG['themes'].get(key)
+    a=normalize_topic(a);key=a.get('theme_key','');definition=CONFIG['themes'].get(key)
+    if key in AGGREGATION_CONFIG.get('display_topics',{}):return key,a['topic']
     if definition and definition['category']==cat:return key,definition['name']
-    # Unknown themes retain their concrete topic; no broad category-level paraphrase merging.
-    return ('custom:'+key if key else 'specific:'+a['topic']+':'+a['claim']),a['topic']
+    return (key if key.startswith('custom:') else 'custom:'+key if key else 'specific:'+a['topic']+':'+a['claim']),a['topic']
 
 def aggregate(run,results,annotations=None):
     successful={r['review_id'] for r in results if r['status']=='completed'};den=len(successful)
@@ -44,6 +66,7 @@ def aggregate(run,results,annotations=None):
                 changes={k:v for k,v in rule.get('changes',{}).items() if k not in edited}
                 if edited & {'polarity','experience','subject'}:changes.pop('_bucket',None)
                 a.update(changes);note=rule.get('reason');corrections.append({'review_id':r['review_id'],'aspect_id':a['id'],'reason':note,'changes':changes})
+            a=normalize_topic(a)
             kind=a.get('feedback_kind','产品反馈');cat=category(a);bucket='actual'
             if a['topic'] in BEHAVIORS or (kind=='行为或意向' and (a.get('theme_key') in BEHAVIOR_THEMES or a['subject']=='其他产品')):bucket='behavior'
             elif kind=='行为或意向' and a['experience']!='实际经历':bucket={'用户期望':'expectation','担心':'concern','转述':'reported'}.get(a['experience'],'unknown')
@@ -53,7 +76,7 @@ def aggregate(run,results,annotations=None):
             elif a['polarity']=='信息不足':bucket='unknown'
             elif a['experience']!='实际经历':bucket={'用户期望':'expectation','担心':'concern','转述':'reported'}.get(a['experience'],'unknown')
             if legacy and not migrated and 'major_category' not in original and bucket=='actual':bucket='unknown'
-            ref={'review_id':r['review_id'],'aspect_id':a['id'],'original_topic':original['topic'],'original_claim':original['claim'],'claim':a['claim'],'evidence':a['evidence'],'evidence_field':a['evidence_field'],'subject':a['subject'],'experience':a['experience'],'polarity':a['polarity'],'context_note':note,'feedback_kind':kind,'confidence':a.get('confidence','未提供'),'bucket':bucket,'scenario':a.get('scenario','未说明')}
+            ref={'review_id':r['review_id'],'aspect_id':a['id'],'original_topic':original['topic'],'topic':a['topic'],'original_claim':original['claim'],'claim':a['claim'],'evidence':a['evidence'],'evidence_field':a['evidence_field'],'subject':a['subject'],'experience':a['experience'],'polarity':a['polarity'],'context_note':note,'feedback_kind':kind,'confidence':a.get('confidence','未提供'),'bucket':bucket,'scenario':a.get('scenario','未说明')}
             if kind=='使用背景':scenes.append(ref);continue
             if kind=='整体评价':overall.append(ref);continue
             if bucket=='behavior':

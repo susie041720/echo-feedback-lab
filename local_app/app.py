@@ -314,6 +314,7 @@ def aggregation_effective(run):
                 changes={k:v for k,v in rule.get('changes',{}).items() if k not in edited}
                 if edited & {'polarity','experience','subject'}:changes.pop('_bucket',None)
                 aspect.update(changes)
+            aspect.update(thematic.normalize_topic(aspect))
             aspect['_comparison']=evidence.comparison(aspect,raw_reviews.get(row['review_id']))
     return results
 

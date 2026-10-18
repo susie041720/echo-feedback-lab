@@ -3,7 +3,7 @@ import hashlib,json,math,re
 from pathlib import Path
 import evidence
 CORE_CONFIG=json.loads((Path(__file__).parent/'config/core_findings.json').read_text())
-VERSION='findings-5.1-neutral-comparison-label'
+VERSION='findings-5.2-concise-titles'
 # Compatibility only: recommendations are selected by concrete themes below.
 DIRECTIONS={}
 
@@ -90,7 +90,7 @@ def build(agg,run,raw_total,raw_reviews=None):
             action='分别核对双方对“'+label+'”的评价对象、比较基准和原文明示的条件，再比较同口径体验。';basis='双方引文都指向同一具体主题；现有正负数量不能解释差异原因。';critical='比较条件尚未统一，差异原因未知。';missing=['缺少双方可按同一口径比较的条件。'];validation='对照同一对象、阶段和使用条件；不把不同基准的评价判为矛盾。';tier='针对场景调查';impact='同一具体主题存在不同体验'
         else:
             qualifier='一条评论' if n==1 else str(n)+'条评论'
-            f['title']=(label+'是当前样本中较集中的认可点' if concentrated else qualifier+'认可'+label) if pos else qualifier+'反映'+label
+            f['title']=label if pos else qualifier+'反映'+label
             # A one-member overcooking cluster cannot claim both burning and dryness.
             if f['family']=='overcooking' and len(f['groups'])==1:f['title']=qualifier+'反映'+f['contributions'][0]['label']
             if len(f['groups'])>1:
