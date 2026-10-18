@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Local consumer feedback workbench. Python standard library only."""
 import csv, io, json, os, uuid, hashlib, threading, datetime, urllib.request, urllib.error, zipfile, secrets, argparse, re
-import thematic, insights, workflow, sys, evidence, batching, copy, time, performance
+import thematic, insights, workflow, sys, evidence, batching, copy, time, performance, cumulative
 from pathlib import Path
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
@@ -210,7 +210,7 @@ def usage_report(run):
         for k,alias in [('input_tokens','prompt_tokens'),('output_tokens','completion_tokens'),('total_tokens','total_tokens')]:
             value=u.get(k,u.get(alias))
             if isinstance(value,int):totals[k]=(totals[k] or 0)+value
-    return {'requested_model':run.get('model'),'reported_models':sorted(models),'requests_finished':len(records),'reused_reviews':sum(bool(r.get('request_reused')) for r in run['results']),'requests_with_usage':reported,'requests_without_usage':len(records)-reported,'tokens_reported':totals if reported else ({'input_tokens':0,'output_tokens':0,'total_tokens':0} if run.get('workflow') and not records else None),'note':'只累计服务实际返回的用量，包括输出校验失败的请求；未返回用量不按零推断，不估算费用。'}
+    return {'requested_model':run.get('model'),'reported_models':sorted(models),'requests_finished':len(records),'reused_reviews':sum(bool(r.get('request_reused')) and (not run.get('derived_kind') or r['status']=='completed') for r in run['results']),'requests_with_usage':reported,'requests_without_usage':len(records)-reported,'tokens_reported':totals if reported else ({'input_tokens':0,'output_tokens':0,'total_tokens':0} if run.get('workflow') and not records else None),'note':'只累计服务实际返回的用量，包括输出校验失败的请求；未返回用量不按零推断，不估算费用。'}
 
 
 def usage_lineage(run):
@@ -281,8 +281,16 @@ def _build_thematic_summary(run):
     agg=thematic.aggregate(run,effective(run),annotations)
     dataset=load(dataset_path(run['dataset_id'])) if run.get('dataset_id') and dataset_path(run['dataset_id']).exists() else None
     raw_total=len(dataset['reviews']) if dataset else len(run['review_ids'])
+    if dataset and dataset.get('derived_kind'):
+        origins={r['id']:r.get('origins',[]) for r in dataset['reviews']}
+        for collection in [*[g['sources'] for c in agg['categories'] for g in c['groups']],agg['behaviors'],agg['scenarios'],agg['overall_evaluations']]:
+            for source in collection:source['batch_origins']=origins.get(source['review_id'],[])
     evidence.enrich(agg,{r['id']:r['raw'] for r in dataset['reviews']} if dataset else {})
     agg['report']=insights.build(agg,run,raw_total,{r['id']:r['raw'] for r in dataset['reviews']} if dataset else {})
+    if run.get('cumulative'):
+        agg['report']['cumulative']=run['cumulative']
+        agg['report']['title']='累计分析报告'
+        agg['report']['limitations'].append(run['cumulative']['identity_note'])
     agg['report']['boundary_groups']=[g for c in agg['categories'] for g in c['groups'] if g['bucket']!='actual' or g['polarity']=='中立']
     agg['report']['historical_timings']=performance.historical_timings(sys.modules[__name__],run.get('dataset_id'))
     agg['report']['usage']=usage_report(run)
@@ -388,6 +396,7 @@ def validate_connection(config):
 
 
 def create_run(d,config):
+    if d.get('derived_kind'):raise ValueError('累计分析只复用已有结果，请在原批次进行模型分析。')
     if config.get('workflow') in ['guided','daily']:return workflow.create(sys.modules[__name__],d,config)
     key=config.get('key','').strip() or os.environ.get('OPENAI_API_KEY','')
     if not key:raise ValueError('尚未配置 API Key，未调用模型，也没有生成分析')
@@ -451,7 +460,9 @@ def summarize_run(i):
 def export_zip(d,run=None):
     out=io.BytesIO()
     with zipfile.ZipFile(out,'w',zipfile.ZIP_DEFLATED) as z:
-        z.writestr('raw_upload.csv',(DATA/('upload_'+d['id']+'.csv')).read_bytes())
+        if d.get('derived_kind'):
+            raw_csv=io.StringIO();writer=csv.DictWriter(raw_csv,fieldnames=d['columns']);writer.writeheader();writer.writerows(r['raw'] for r in d['reviews']);z.writestr('cumulative_reviews.csv','\ufeff'+raw_csv.getvalue())
+        else:z.writestr('raw_upload.csv',(DATA/('upload_'+d['id']+'.csv')).read_bytes())
         z.writestr('raw_reviews.json',json.dumps(d,ensure_ascii=False,indent=2))
         z.writestr('source_report.md',(DATA/'source_report.md').read_text())
         if run:
@@ -472,6 +483,7 @@ def export_zip(d,run=None):
                     values=[r['review_id']]+[json.dumps(a.get(k,''),ensure_ascii=False) if isinstance(a.get(k,''),dict) else a.get(k,'') for k in fields[1:]]
                     w.writerow(["'"+v if isinstance(v,str) and v.lstrip().startswith(('=','+','-','@')) else v for v in values])
             z.writestr('analysis.csv','\ufeff'+csvout.getvalue())
+        if d.get('cumulative'):z.writestr('batch_lineage.json',json.dumps({'cumulative':d['cumulative'],'review_origins':{r['id']:r.get('origins',[]) for r in d['reviews']}},ensure_ascii=False,indent=2))
         z.writestr('README.txt','原始上传 CSV 保持原文，可能含电子表格公式，请以文本查看。analysis.csv 已对公式起始字符加单引号。JSON 保留原始值。数量与比例仅限导入样本；多主题不可相加。AI归纳可能有误判，可按需核对和修订；人工复核为可选操作。无模型结果时仅导出原始数据。')
     return out.getvalue()
 
@@ -489,7 +501,8 @@ class Handler(BaseHTTPRequestHandler):
             if u.path in ['/app.js','/style.css']:
                 return self.respond((ROOT/'static'/u.path[1:]).read_bytes(),mime='text/javascript; charset=utf-8' if u.path.endswith('js') else 'text/css; charset=utf-8')
             if u.path=='/api/state':
-                datasets=[{k:d[k] for k in ['id','product','filename','created_at']}|{'count':len(d['reviews'])} for d in [load(p) for p in DATA.glob('dataset_*.json')]]
+                with LOCK:cumulative.refresh(sys.modules[__name__])
+                datasets=[{k:d[k] for k in ['id','product','filename','created_at']}|{'count':len(d['reviews']),'derived_kind':d.get('derived_kind')} for d in [load(p) for p in DATA.glob('dataset_*.json')]]
                 runs=[{k:r[k] for k in ['id','dataset_id','product','created_at','status','model']} for r in [load(p) for p in RUNS.glob('*.json')]]
                 return self.respond({'datasets':sorted(datasets,key=lambda x:x['created_at'],reverse=True),'runs':sorted(runs,key=lambda x:x['created_at'],reverse=True),'token':TOKEN,'env_key_available':bool(os.environ.get('OPENAI_API_KEY')),'taxonomy':thematic.CONFIG,'app_version':'5.0-demo-case','latest_benchmark':performance.latest(sys.modules[__name__])})
             if u.path=='/api/benchmark-output':return self.respond(load(performance.folder(sys.modules[__name__])/(valid_id(q['id'][0])+'.json')))

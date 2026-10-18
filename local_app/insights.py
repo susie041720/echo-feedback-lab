@@ -127,6 +127,8 @@ def build(agg,run,raw_total,raw_reviews=None):
 
 def markdown(report,include_evidence=True):
     lines=['# '+report['title'],'',report.get('product','')+' · 批次 '+report['run_id'],'',f'成功 {report["success"]}/{report["raw_count"]} 条；失败 {report["failed"]}；未请求 {report["unattempted"]}。','']
+    if report.get('cumulative'):
+        m=report['cumulative'];lines+=['累计范围：'+str(len(m['source_batches']))+' 个原始批次；导入记录 '+str(m['source_record_count'])+' 条，跨批次去重 '+str(m['duplicate_count'])+' 条。','']
     for key,title in [('keeps','值得保持的地方'),('issues','值得关注的问题')]:
         lines+=['## '+title,'']
         if not report[key]:lines+=['当前证据未形成该类核心发现，详细主题仍保留。','']
@@ -146,6 +148,7 @@ def markdown(report,include_evidence=True):
             if f['missing_evidence']:lines+=['关键缺失：'+'；'.join(f['missing_evidence'])]
             if f['recommendation']['validation']:lines+=['验证方式：'+f['recommendation']['validation']]
             for s in f['sources']:
+                if s.get('batch_origins'):lines+=['所属批次：'+'；'.join(x['batch_label']+'（批次 '+x['batch_id']+'，原评论 '+x['review_id']+'）' for x in s['batch_origins'])]
                 comp=s.get('comparison') or evidence.comparison(s)
                 lines += [f'- review_id={s["review_id"]} / aspect_id={s["aspect_id"]} · {s["bucket"]}/{s["polarity"]}：{s["claim"]}',f'  原文：{s["evidence"]}',f'  比较依据：{comp["basis"]}；对象：{comp["reference"]}；情境：{s.get("scenario","未知")}']
             for b in f['behavior_links']:lines+=['- 行为：'+b['status']+'；'+b['association']+'；'+b['claim']+'；原文：'+b['evidence']]
