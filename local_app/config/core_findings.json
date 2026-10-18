@@ -1,0 +1,229 @@
+{
+  "version": "3.1-explicit-bilingual-alias",
+  "purpose": "只定义可合并的语义关系；发现取决于当前有效证据，不固定数量。",
+  "clusters": {
+    "meal-effort": {
+      "polarity": "优点",
+      "theme_keys": [
+        "operation-ease",
+        "turning",
+        "cooking-speed"
+      ],
+      "label": "日常做饭省时省事",
+      "action": "保留当前受到认可的操作便利与省时体验。",
+      "action_basis": "这些评论明确认可操作便利或烹饪效率，支持保留相应体验。"
+    },
+    "cleanup-effort": {
+      "polarity": "优点",
+      "theme_keys": [
+        "clean-ease",
+        "oil-mess"
+      ],
+      "label": "清理省事",
+      "action": "保留受到认可的清洗便利和油污处理体验。",
+      "action_basis": "依据是使用后的清洗或油污自述；不将整体方便推广到每个部件。"
+    },
+    "cooking-results-positive": {
+      "polarity": "优点",
+      "theme_keys": [
+        "air-fry-results",
+        "crispness",
+        "multi-function-cooking-results",
+        "reheat-results",
+        "roast-results",
+        "food-taste"
+      ],
+      "label": "成品口感与烹饪效果",
+      "action": "保留已获认可的成品口感及具体烹饪任务表现。",
+      "action_basis": "实际制作或复热后的成品描述，支持保留对应的口感与任务表现。"
+    },
+    "overcooking": {
+      "polarity": "槽点",
+      "theme_keys": [
+        "surface-burning",
+        "air-fry-results"
+      ],
+      "member_conditions": {
+        "air-fry-results": {
+          "evidence_regex": "(?:\\b(?:dry|overcook\\w*)\\b|偏干|过干|烹饪过度|过度烹饪)",
+          "label": "成品过干或烹饪过度"
+        }
+      },
+      "label": "成品焦糊或过干",
+      "action": "按各条评论分别收集食材、份量、温度、时长和预热条件，再复测焦糊或过干现象。",
+      "action_basis": "评论直接描述成品问题，支持先排查烹饪条件；尚不足以确定原因或要求改产品。",
+      "missing": "缺少原烹饪参数和可复现的对照结果。",
+      "core_impact": "影响烹饪成品"
+    }
+  },
+  "theme_descriptions": {
+    "portion-capacity": {
+      "优点": "容量满足评论者各自的用量需求。",
+      "槽点": "容量未满足评论者的用量需求。"
+    },
+    "value-money": {
+      "优点": "评论者认为价格与所得体验相称。"
+    },
+    "cooking-speed": {
+      "优点": "评论者认为完成烹饪较快。"
+    },
+    "size-fit": {
+      "优点": "评论者认为产品尺寸合适，未统一说明指容量还是机身占地。"
+    },
+    "clean-ease": {
+      "优点": "日常清理省事获得认可。"
+    },
+    "operation-ease": {
+      "优点": "设置与日常操作容易上手获得认可。"
+    }
+  },
+  "comparable_specific_themes": [
+    "clean-ease",
+    "crispness",
+    "cooking-speed",
+    "portion-capacity",
+    "operating-noise",
+    "value-money"
+  ],
+  "theme_impacts": {
+    "closure": "影响正常使用",
+    "surface-burning": "影响烹饪成品",
+    "air-fry-results": "影响烹饪成品",
+    "basket-design": "结构设计与使用适配",
+    "startup-noise": "主观声音感受，是否异常未定",
+    "time-temp-learning": "轻微操作不便；评论者仍可能接受"
+  },
+  "selection": {
+    "positive_min_reviews": 2,
+    "positive_min_fraction": 0.15,
+    "negative_min_reviews": 2,
+    "negative_min_fraction": 0.1,
+    "note": "核心发现突出反复出现的明确体验，以及安全担忧、明示退货或影响正常使用/成品的具体问题。其余保留详细主题，不按固定项数补齐。"
+  },
+  "theme_actions": {
+    "clean-ease": {
+      "label": "清洗方便",
+      "positive_action": "保留评论中受到认可的清洗便利。",
+      "negative_label": "清洗费事",
+      "negative_action": "分别核对难清洗的部件、污渍与拆洗方法，再判断是否需要维护指引或结构改进。"
+    },
+    "oil-mess": {
+      "label": "油污杂乱少",
+      "positive_action": "保留评论中少油污杂乱的体验。",
+      "negative_label": "油污处理费事",
+      "negative_action": "核对油污发生的位置、菜品和清理方法，再判断是否需要使用指引或维护改进。"
+    },
+    "operation-ease": {
+      "label": "操作容易",
+      "positive_action": "保留受到认可的操作步骤与设置便利。",
+      "negative_label": "操作费事",
+      "negative_action": "确认具体卡在哪个操作步骤，观察完成任务的过程，再考虑步骤或界面调整。"
+    },
+    "turning": {
+      "label": "翻面操作省事",
+      "positive_action": "保留评论明确认可的翻面操作便利，不推广到所有食材。"
+    },
+    "cooking-speed": {
+      "label": "烹饪较快",
+      "positive_action": "保留在评论所述任务中烹饪较快的体验；不据主观评价宣称统一速度指标。",
+      "negative_label": "烹饪速度不满意",
+      "negative_action": "统一食材、份量、模式及是否包含预热的计时口径，再核对所述速度问题。",
+      "comparison_label": "完成烹饪所需时间"
+    },
+    "oven-replacement-convenience": {
+      "label": "减少开烤箱的便利",
+      "positive_action": "保留原文所述场景下减少开烤箱的便利。"
+    },
+    "air-fry-results": {
+      "label": "空气炸成品表现",
+      "positive_action": "保留评论认可的空气炸成品表现。",
+      "negative_action": "确认具体成品问题，再按食材和烹饪参数复测；不将原因不明的效果不佳统一归因。",
+      "missing": "缺少成品问题的具体条件与复现结果。",
+      "core_impact": "影响烹饪成品"
+    },
+    "crispness": {
+      "label": "酥脆口感",
+      "positive_action": "保留在原文明示菜品与做法中的酥脆口感。",
+      "negative_label": "酥脆表现不佳",
+      "negative_action": "核对食材、用量、用油与烹饪参数，复测所述酥脆表现。"
+    },
+    "multi-function-cooking-results": {
+      "label": "多种模式表现",
+      "positive_action": "保留实际使用过的模式中受到认可的表现。"
+    },
+    "reheat-results": {
+      "label": "复热成品表现",
+      "positive_action": "保留评论认可的复热效果。"
+    },
+    "roast-results": {
+      "label": "烘烤成品表现",
+      "positive_action": "保留评论认可的烘烤成品表现。"
+    },
+    "food-taste": {
+      "label": "成品味道",
+      "positive_action": "保留评论认可的成品味道。"
+    },
+    "surface-burning": {
+      "label": "食物顶部焦糊",
+      "negative_action": "核对顶部焦糊的食材、放置方式、温度、时长和预热条件，复测具体个体。",
+      "missing": "缺少正常条件下的复现结果。",
+      "core_impact": "影响烹饪成品"
+    },
+    "closure": {
+      "label": "舱体无法正常闭合",
+      "negative_action": "先核对该个体的舱体、炸篮装配和售后情况，确认闭合问题能否复现。",
+      "missing": "尚未确认正常装配下的复现情况与售后结论。",
+      "core_impact": "影响正常使用"
+    },
+    "basket-design": {
+      "label": "独立炸篮结构不符合个人使用偏好",
+      "negative_action": "补充炸篮与锅体的结构展示，了解评论者期待的具体用法，再判断是否构成设计改进候选。",
+      "missing": "缺少评论者期待的结构与实际任务细节。"
+    },
+    "time-temp-learning": {
+      "label": "时间温度需要摸索",
+      "negative_action": "确认哪些菜品的时间温度最难掌握，考虑补充相应参数示例；不据试错自述认定说明书有缺陷。",
+      "missing": "缺少需要额外摸索的具体菜品和参数。"
+    },
+    "startup-noise": {
+      "label": "启动声音让人感觉异常",
+      "negative_action": "记录启动阶段的模式和声音，并与同型号正常启动表现比较，再决定是否异常排查。",
+      "missing": "缺少正常声音参照和该个体的可复现记录。"
+    },
+    "operating-noise": {
+      "label": "运行声音低于预期",
+      "positive_action": "保留原文明示的声音体验，不扩展为统一噪声指标。",
+      "negative_label": "运行声音不满意",
+      "negative_action": "确认运行阶段、环境和比较基准，取得可比较的声音描述后再判断是否异常。",
+      "comparison_label": "运行声音感受"
+    },
+    "cooking-fit": {
+      "label": "与个人烹饪方式不适配",
+      "negative_action": "回访不适配的具体任务和结果；原因不明时暂不决定改容量、功能或结构。",
+      "missing": "缺少“不适配”所指的具体任务与表现。"
+    },
+    "basket-heating-control": {
+      "label": "取篮后的工作状态",
+      "positive_action": "保留评论者对取篮检查便利的自述；不据此判断保护机制。",
+      "negative_action": "核对取篮时的真实工作状态与保护机制，并确认评论者是否亲自观察过异常。",
+      "missing": "尚缺实际观察、保护机制说明及正常条件下的核查证据。",
+      "safety_topic": "取篮"
+    },
+    "portion-capacity": {
+      "label": "容量符合所述人数与份量",
+      "positive_action": "保留所述人数和份量下的容量适配体验，不外推为统一适用人数。",
+      "negative_label": "容量不符合需求",
+      "negative_action": "确认人数、单次份量与食材尺寸，先补充选购适配信息，再判断是否需要容量调整。",
+      "comparison_label": "容量与用量匹配"
+    },
+    "value-money": {
+      "label": "价格与体验相称",
+      "positive_action": "保留评论者在其购买条件下的价值认可，不推断未提供的价格或人群。",
+      "negative_label": "价格与体验不相称",
+      "negative_action": "核对实际购买条件和未满足的具体体验，再考虑价格说明或价值定位调整。"
+    }
+  },
+  "theme_aliases": {
+    "running-noise": "operating-noise"
+  }
+}

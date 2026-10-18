@@ -1,0 +1,175 @@
+{
+  "id": "air_fryer",
+  "version": "2.0",
+  "name": "空气炸锅",
+  "categories": {
+    "cooking": {
+      "name": "烹饪功能与表现",
+      "scope": "烹饪任务、口感、酥脆度、受热均匀性、预热和烹饪速度"
+    },
+    "usability": {
+      "name": "操作与使用便利",
+      "scope": "学习、设置、按键、说明书、操作步骤、翻面等操作便利"
+    },
+    "capacity": {
+      "name": "容量与空间适配",
+      "scope": "食物容量、适用人数、食材尺寸、机身占地和收纳"
+    },
+    "cleaning": {
+      "name": "清洁与维护",
+      "scope": "清洗、拆卸、油污处理和日常保养"
+    },
+    "reliability": {
+      "name": "结构、质量与耐用性",
+      "scope": "做工、部件设计、闭合、把手、涂层和故障"
+    },
+    "environment": {
+      "name": "使用环境与感受",
+      "scope": "噪音、异味、散热和外部温度"
+    },
+    "value": {
+      "name": "价格与价值感",
+      "scope": "价格合理性和物有所值的判断"
+    },
+    "other": {
+      "name": "其他明确反馈",
+      "scope": "具体但不适合其他类别的反馈；保留原主题，不补造原因"
+    }
+  },
+  "feedback_kinds": [
+    "产品反馈",
+    "用途描述",
+    "使用背景",
+    "整体评价",
+    "行为或意向"
+  ],
+  "themes": {
+    "clean-ease": {
+      "name": "清洁便利",
+      "category": "cleaning",
+      "meaning": "整体清洁是否方便；具体部件或条件不同应另建主题",
+      "descriptions": {
+        "优点": "日常清理方便。",
+        "槽点": "日常清理费力。"
+      }
+    },
+    "operation-ease": {
+      "name": "操作便捷性",
+      "category": "usability",
+      "meaning": "日常操作是否容易",
+      "descriptions": {
+        "优点": "日常操作容易上手。",
+        "槽点": "日常操作较繁琐。"
+      }
+    },
+    "turning": {
+      "name": "翻面操作",
+      "category": "usability",
+      "meaning": "翻面步骤是否方便，非食物口感",
+      "descriptions": {
+        "优点": "评论者认可翻面操作的便利。"
+      }
+    },
+    "air-fry-results": {
+      "name": "空气炸效果",
+      "category": "cooking",
+      "meaning": "对空气炸功能成品的评价，不把其他用途外推为已验证",
+      "descriptions": {
+        "优点": "评论者对空气炸成品效果表达肯定。"
+      }
+    },
+    "crispness": {
+      "name": "酥脆表现",
+      "category": "cooking",
+      "meaning": "明确针对食物酥脆度的描述",
+      "descriptions": {
+        "优点": "成品的酥脆口感获得肯定。"
+      }
+    },
+    "surface-burning": {
+      "name": "顶部焦糊",
+      "category": "cooking",
+      "meaning": "食物顶部焦糊；原因不明确时不得归因"
+    },
+    "cooking-speed": {
+      "name": "烹饪速度",
+      "category": "cooking",
+      "meaning": "对烹饪快慢的评价"
+    },
+    "preheat-start": {
+      "name": "预热与启动表现",
+      "category": "cooking",
+      "meaning": "保留预热过程与结果的限定关系，不把能够升温当卖点"
+    },
+    "closure": {
+      "name": "炸篮闭合",
+      "category": "reliability",
+      "meaning": "闭合相关的设计或使用问题"
+    },
+    "basket-design": {
+      "name": "篮筐结构",
+      "category": "reliability",
+      "meaning": "篮筐部件设计，不包括容量、清洁"
+    },
+    "startup-noise": {
+      "name": "启动噪音",
+      "category": "environment",
+      "meaning": "启动时声音感受；主观疑虑不证明故障"
+    },
+    "portion-capacity": {
+      "name": "人数与容量匹配",
+      "category": "capacity",
+      "meaning": "有评价的适用人数或容量；纯人数背景独立记录"
+    },
+    "value-money": {
+      "name": "价格价值感",
+      "category": "value",
+      "meaning": "价格是否合理、是否物有所值"
+    },
+    "cooking-fit": {
+      "name": "烹饪方式适配",
+      "category": "other",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "health-expectation": {
+      "name": "健康饮食期待",
+      "category": "other",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "preparation": {
+      "name": "食材准备",
+      "category": "usability",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "loading": {
+      "name": "食材装载",
+      "category": "usability",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "old-unit-incident": {
+      "name": "旧机使用事故",
+      "category": "reliability",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "basket-heating-control": {
+      "name": "取篮后的加热控制",
+      "category": "reliability",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "guide": {
+      "name": "指南与学习帮助",
+      "category": "usability",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "capacity-wish": {
+      "name": "更大容量需求",
+      "category": "capacity",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    },
+    "dehydrating-capacity": {
+      "name": "水果脱水容量适配",
+      "category": "capacity",
+      "meaning": "保持该具体对象与条件，不外推为其他主题。"
+    }
+  }
+}
