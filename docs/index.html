@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>回声 · 消费者反馈分析｜模拟数据演示</title><meta name="description" content="面向产品和运营人员的消费者反馈分析作品原型。使用明确标注的模拟评论，展示核心发现、主题、不同评价、行动建议和原文追溯。"><link rel="stylesheet" href="./style.css"><script src="./app.js" defer></script></head>
+<body data-ui-version="6.0">
+<a class="skip-link" href="#main-content">跳至分析内容</a>
+<aside class="sidebar" aria-label="工作台导航">
+ <a class="brand" href="#/analysis"><span class="brand-icon" aria-hidden="true">◒</span><span>回声<small>消费者反馈工作台</small></span></a>
+ <p class="nav-caption">分析工作空间</p>
+ <nav class="primary-nav" aria-label="分析导航">
+  <a href="#/analysis" data-view="summary"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>分析概览</span></a>
+  <a href="#/themes" data-view="themes"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v15H4zM4 10h16M10 10v10"/></svg><span>主题分析</span></a>
+  <a href="#/report" data-view="report"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h9l4 4v14H6zM14 3v5h5M9 12h7M9 16h7"/></svg><span>分析报告</span></a>
+  <a href="#/evidence" data-view="evidence"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 15a3 3 0 0 1-3 3H9l-5 3V6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3zM8 8h8M8 12h5"/></svg><span>评论与证据</span></a>
+ </nav>
+ <div class="sidebar-bottom"><p class="nav-caption">关于项目</p><nav class="utility-nav"><a href="https://github.com/susie041720/echo-feedback-lab" target="_blank" rel="noopener">↗ 项目代码与说明</a><a href="https://github.com/susie041720/echo-feedback-lab#本地启动" target="_blank" rel="noopener">↗ 本地完整版使用</a></nav><div class="local"><i></i>模拟数据 · 静态演示</div></div>
+</aside>
+<div class="app-shell">
+ <header class="toolbar" aria-label="产品与批次工具栏">
+  <div class="product-identity"><span class="field-caption">当前产品</span><strong id="current-product">选择产品批次</strong><span id="toolbar-status" class="status-pill">尚未选择</span></div>
+  <div class="batch-controls"><div class="selector-field"><label for="dataset">评论批次</label><select id="dataset"></select></div><div class="selector-field"><label for="run">分析结果</label><select id="run"></select></div></div>
+  <div class="toolbar-actions"><a class="primary demo-button" href="#/analysis">查看示例分析</a><button id="analyze" hidden disabled></button><button id="pause" class="small-button" hidden>暂停分析</button><a id="export" class="export disabled" href="#" download="echo-simulated-demo-report.md">导出演示报告 ↓</a></div>
+ </header>
+ <main id="main-content" tabindex="-1">
+  <div class="page-heading"><div><h1 id="page-title">分析概览</h1><p id="page-description" class="sub">当前批次的核心发现与优先关注事项。</p></div></div>
+  <div id="notice" role="status" aria-live="polite" hidden></div>
+  <section id="progress-panel" class="progress-panel" aria-label="批次分析进度" hidden><div class="progress-copy"><strong id="progress-title">分析进行中</strong><span id="progress-counts"></span></div><progress id="analysis-progress" max="100" value="0" aria-label="已处理评论进度"></progress><p id="analysis-state" class="hint"></p></section>
+  <aside class="demo-banner" aria-label="演示范围"><strong>模拟评论演示 · 预置分析结果</strong><p>回声帮助产品和运营从评论中归纳重点、追溯证据并制定调查方向。本例使用16条自编模拟评论及虚构型号，结果由真实模型流程生成；浏览时不调用模型，不代表真实消费者研究。</p></aside>
+  <section class="metrics" id="metrics" aria-label="当前批次指标">
+   <div class="metric-card"><div class="metric-label">模拟评论</div><strong id="total">0</strong><small>当前选中批次</small></div>
+   <div class="metric-card"><div class="metric-label">成功分析评论</div><strong id="completed">0</strong><small id="coverage">尚未分析</small></div>
+   <div class="metric-card negative-metric"><div class="metric-label">明确负面体验描述</div><strong id="negative-count">—</strong><small id="negative-scope">独立评论 · 不含期待与担忧</small></div>
+  </section>
+  <section class="board"><div class="board-head"><div><h2 id="board-title">核心发现</h2><p id="confirmation-state">AI 自动归纳 · 原文可追溯</p></div><div class="tabs" id="analysis-tabs" role="tablist" aria-label="评论与证据视图" hidden><button data-tab="raw" role="tab">原始评论</button><button data-tab="feedback" role="tab">细分反馈</button><button data-tab="scenarios" role="tab">使用情境</button></div></div>
+   <div id="result-status" class="result-status" hidden></div>
+   <div id="filters" hidden><div class="filter-row"><label for="category">体验分类<select id="category"><option value="">全部分类</option></select></label><label for="topic">细分标签<select id="topic"><option value="">全部标签</option></select></label><label for="polarity">评价倾向<select id="polarity"><option value="">全部倾向</option><option>优点</option><option>槽点</option><option>中立</option><option>信息不足</option></select></label><label for="scope">信息类型<select id="scope"><option value="all">全部类型</option><option value="actual">实际体验</option><option value="expectation">用户期望</option><option value="concern">担心</option><option value="reported">转述</option><option value="unknown">信息不足</option><option value="reference">其他产品背景</option></select></label></div></div>
+   <div id="results"></div>
+  </section>
+  <footer>作品原型 · 本例为模拟数据，AI 归纳仍可能误判。未验证实际效率、满意度或复购效果。</footer>
+ </main>
+</div>
+<div hidden><input id="product"><input id="key" type="password" disabled><select id="sample"><option value="daily">daily</option></select><p id="sample-info"></p><p id="source-status"></p><p id="source-description"></p><p id="import-info"></p><button id="developer-trial"></button></div><dialog id="settings" hidden><p id="settings-notice"></p></dialog>
+<dialog id="theme-detail" class="drawer wide-drawer" aria-labelledby="theme-title"><div class="dialog-head"><div><span class="field-caption">主题详情</span><h2 id="theme-title">主题与证据</h2></div><button id="close-theme" class="icon-button" aria-label="关闭主题详情">✕</button></div><div id="theme-content" class="drawer-body"></div></dialog>
+<dialog id="evidence" aria-labelledby="evidence-title"><div class="dialog-head"><h2 id="evidence-title">原文与证据</h2><button id="close-dialog" class="icon-button" aria-label="关闭原文证据">✕</button></div><div id="evidence-content"></div></dialog>
+</body></html>
