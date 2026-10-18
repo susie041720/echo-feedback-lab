@@ -1,5 +1,5 @@
 {
-  "version": "3.1-explicit-bilingual-alias",
+  "version": "3.2-canonical-topic-labels",
   "purpose": "只定义可合并的语义关系；发现取决于当前有效证据，不固定数量。",
   "clusters": {
     "meal-effort": {
@@ -19,7 +19,7 @@
         "clean-ease",
         "oil-mess"
       ],
-      "label": "清理省事",
+      "label": "清洁方便",
       "action": "保留受到认可的清洗便利和油污处理体验。",
       "action_basis": "依据是使用后的清洗或油污自述；不将整体方便推广到每个部件。"
     },
@@ -225,5 +225,17 @@
   },
   "theme_aliases": {
     "running-noise": "operating-noise"
-  }
+  },
+  "display_topics": {
+    "cooking-fit": "需求适配",
+    "cooking-use-range": "用途范围",
+    "clean-ease": "清洁方便"
+  },
+  "topic_aliases": {
+    "烹饪用途广泛": "cooking-use-range",
+    "烹饪用途范围": "cooking-use-range",
+    "用途范围": "cooking-use-range",
+    "烹饪用途记录及效果评价限定": "cooking-use-range"
+  },
+  "overall_topic": "整体评价"
 }
