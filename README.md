@@ -52,7 +52,7 @@ cd echo-feedback-lab/local_app
 python3 app.py
 ```
 
-打开 `http://127.0.0.1:8772/`。若端口已占用，可运行 `python3 app.py --port 8780`。macOS 也可双击 `local_app/启动工作台.command`。
+打开 `http://127.0.0.1:8772/`。若端口已占用，可运行 `python3 app.py --port 8780`。macOS 也可先执行 `chmod +x local_app/启动工作台.command`，再双击启动。
 
 从“导入与产品设置”上传 UTF-8 CSV，必须含 `text` 列；空模板为 `local_app/data/upload_template.csv`。正文、标题、评分、日期、型号、商品标识、来源、购买验证及可获取标签原样保留，只做必要格式处理和完全重复去重。
 
