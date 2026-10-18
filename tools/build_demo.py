@@ -65,7 +65,7 @@ async function api(path,body){if(body)throw Error('公开演示使用预置结�
     source=source.replace("$('current-product').textContent=", "for(const id of ['dataset','run']){const placeholder=$(id).options[0];if(placeholder){placeholder.disabled=true;placeholder.hidden=true}}$('current-product').textContent=")
     source=source.replace("${localTime(r.created_at)} · ${status}","预置示例 · ${status}")
     source=re.sub(r"c.append\(el\('p',`评论记录：\$\{row.id\}`,'meta'\),link\('开发调试中查看完整原始字段'.*?\$\('evidence'\)\.showModal\(\);", "c.append(el('p',`模拟评论记录：${row.raw.review_id}`,'meta'));$('evidence').showModal();",source)
-    source=source.replace("if(current.run.status!=='running'&&current.run.workflow&&report.success<report.raw_count)root.append(button('重试失败／未完成记录（同版本成功项复用）',()=>{$('sample').value='daily';$('analyze').click()}))",'')
+    source=source.replace("if(current.run.status!=='running'&&current.run.workflow&&!dataset.derived_kind&&report.success<report.raw_count)root.append(button('重试失败／未完成记录（同版本成功项复用）',()=>{$('sample').value='daily';$('analyze').click()}))",'')
     source=source.replace('导入消费者评论','读取模拟示例').replace('上传有权使用的 CSV，分析后直接查看结果。','正在读取预置示例；加载失败时请刷新重试。')
     source+='''
 $('dataset').addEventListener('change',()=>selectDataset($('dataset').value).catch(e=>notice(e.message,true)));
