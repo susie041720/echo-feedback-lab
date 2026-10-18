@@ -1,0 +1,22 @@
+{
+  "kind": "synthetic_demo",
+  "author": "Project-authored scenarios with Codex assistance",
+  "product": "回声 AF4（虚构产品）",
+  "count": 16,
+  "not_real_reviews": true,
+  "sampling": "Designed coverage, not a natural consumer sample; no market inference or accuracy score",
+  "coverage": [
+    "positive",
+    "negative",
+    "neutral",
+    "expectation",
+    "concern",
+    "comparison_basis",
+    "same_topic_differences",
+    "other_product",
+    "ambiguous",
+    "context",
+    "behavior_intention"
+  ],
+  "derivation": "Original fictional wording, no retained Amazon text or paraphrase"
+}

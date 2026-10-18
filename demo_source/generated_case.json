@@ -1,0 +1,1479 @@
+{
+  "data_kind": "synthetic_demo",
+  "dataset": {
+    "id": "dca211d088f24e319969459bcc4e8e1a",
+    "product": "回声 AF4（虚构产品）",
+    "filename": "simulated_reviews.csv",
+    "created_at": "2026-10-17T17:42:27.255311+00:00",
+    "reviews": [
+      {
+        "id": "010fef5d08bc465e9295aa0a860d8352",
+        "source_row": 2,
+        "raw": {
+          "review_id": "S01",
+          "title": "[模拟] 晚饭更省事",
+          "text": "两个人吃饭时，我用回声 AF4 做鸡翅。设置温度和时间很容易，鸡翅外皮酥脆，里面没有变干。炸篮放温后清洗也很省事。",
+          "rating": "5",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "7144f92bc377481ca8db58ff2320b04eb45ddfe67352e5b2c9286970ad03d8e2"
+      },
+      {
+        "id": "9fbe13e705ee499fb820d822fdf9152d",
+        "source_row": 3,
+        "raw": {
+          "review_id": "S02",
+          "title": "[模拟] 好洗但把手接缝费事",
+          "text": "用了三个星期，炸篮内壁一冲就干净，日常清洁总体省事。不过把手根部的接缝容易积油，用小刷子才能清理。我只评价这台回声 AF4，没有用过其他空气炸锅。",
+          "rating": "4",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "70e7ec303be7d6d2d17dc2882326f3c3be421f20f5bef1e66f1fb7059a302656"
+      },
+      {
+        "id": "dbdef11a4c994b019642042498ef1571",
+        "source_row": 4,
+        "raw": {
+          "review_id": "S03",
+          "title": "[模拟] 同样是声音，比较标准不同",
+          "text": "购买前我以为回声 AF4 会像吹风机一样响，实际运行声音比我预想的小。做薯条时我仍然能听见风扇，没有觉得它完全安静。薯条做出来很脆。",
+          "rating": "4",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "e63e13526a1795cfa59d973fb76478335220086e8a80834f215de21016097e43"
+      },
+      {
+        "id": "cc3e820e3fac45a4ab023c2c3470a3ba",
+        "source_row": 5,
+        "raw": {
+          "review_id": "S04",
+          "title": "[模拟] 晚间运行声音偏大",
+          "text": "回声 AF4 用空气炸模式运行时，我觉得风扇声偏大，晚上在厨房做饭会打断我听播客。我没有和旧机器做过同场对比，也不知道是不是个体异常。食物做得不错，我还在继续使用。",
+          "rating": "3",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "0edfc92e66aa17daaeb3dc387e1c1a2d982311bc2e58933b25af0ffbec481796"
+      },
+      {
+        "id": "28c6500b4be44542bdfcf2a29185c24c",
+        "source_row": 6,
+        "raw": {
+          "review_id": "S05",
+          "title": "[模拟] 容量对三人偏小",
+          "text": "我们三个人的晚饭，回声 AF4 的炸篮装不下全部鸡块，要分两次做，我觉得容量太小。按钮好理解，但分批让这次晚饭花的时间更长。",
+          "rating": "3",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "2f4e5e810870ac72b1ba94e88ce565524dea0ae1e3a4151aef8f7ba57b1a798b"
+      },
+      {
+        "id": "3e40c15e50b0459c98f59d6c9f93e4ee",
+        "source_row": 7,
+        "raw": {
+          "review_id": "S06",
+          "title": "[模拟] 两人份刚好",
+          "text": "我实际做过两个人的红薯和鸡翅，回声 AF4 的容量刚好满足这一餐，不用分批。机身放在台面角落后还有备餐空间，我觉得占地很合适。",
+          "rating": "5",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "9fd4651e9edddfafe2bb64e74d1143acdb56ea9f805eab9feb3dd2755a850582"
+      },
+      {
+        "id": "642e71c3d01a482487aef760911af754",
+        "source_row": 8,
+        "raw": {
+          "review_id": "S07",
+          "title": "[模拟] 中立用途与背景",
+          "text": "我们家两个人。回声 AF4 放在厨房台面上，周末使用。到目前为止做过薯条和鸡翅，也用复热模式加热过面包。这些只是使用记录，我没有评价效果好坏。",
+          "rating": "3",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "d64ba6848d748dcd8a64233f938a203bdbebc5e8c8ec496dd66bc43a21ee7581"
+      },
+      {
+        "id": "972d1cae3d984308ae265b519681437c",
+        "source_row": 9,
+        "raw": {
+          "review_id": "S08",
+          "title": "[模拟] 期待不是已经体验",
+          "text": "回声 AF4 今天刚到，还没有通电。我希望它容易清洗，也期待以后能更快做好工作日晚饭。朋友说他家的另一款炸锅不错，但这不是我对回声 AF4 的使用体验。",
+          "rating": "4",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "42b5f0113a70e24b7b76570c3c85e53a9c5b899ec21f9416f9518f2b8ae3ef88"
+      },
+      {
+        "id": "f6d89cc2b4634cf29257d49015228f8e",
+        "source_row": 10,
+        "raw": {
+          "review_id": "S09",
+          "title": "[模拟] 担心外壳温度",
+          "text": "我还没用回声 AF4。家里有孩子，我担心工作时外壳会烫手，但没有摸过运行中的外壳，也没有发生烫伤。我想先确认摆放和使用时应该注意什么。",
+          "rating": "3",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "5b42e76c0b5ef93f808bc01fd44a4f8cddc001158f7aa0afd3798e2b1c9ef5ed"
+      },
+      {
+        "id": "0b720464171f4352b7776469a0541a40",
+        "source_row": 11,
+        "raw": {
+          "review_id": "S10",
+          "title": "[模拟] 闭合问题影响使用",
+          "text": "这台回声 AF4 的炸篮推到底后仍不能正常闭合，我因此没有开始烹饪。重新取放两次也一样。我已经申请换货，目前还不知道是安装方式还是这台机器的问题。",
+          "rating": "2",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "94fad0730a727ab8c3693932f86f01e52ed1e435d0996d96825c6dd88d99063e"
+      },
+      {
+        "id": "c0a011c5eb7d43d4a93696319df7fd37",
+        "source_row": 12,
+        "raw": {
+          "review_id": "S11",
+          "title": "[模拟] 初次烹饪偏干",
+          "text": "第一次用回声 AF4 做薄鸡胸肉，我用了包装建议的时间和温度，成品明显偏干，影响口感。没有称食材重量，也没有测实际温度。我还没有调整参数复试，不能确定原因。",
+          "rating": "2",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "fbfeb287c5ccb753b9bba0001ece8302abbdad4f9ce78ba8aca340cb081b4c58"
+      },
+      {
+        "id": "cbc40b0c6e5b4d6ab08c3ce495f96a16",
+        "source_row": 13,
+        "raw": {
+          "review_id": "S12",
+          "title": "[模拟] 旧产品不等于本产品",
+          "text": "我以前的其他品牌空气炸锅涂层脱落，所以换了回声 AF4。回声 AF4 刚用两次，洗起来方便，暂时看不出长期耐用性。旧机脱落的涂层不是这台机器的。",
+          "rating": "4",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "b87ae655c02029eb44aed23b8bbd2cd2aa5402c886f91a4758245e1908fc23d3"
+      },
+      {
+        "id": "7872b5aeeb474b019755002fea275ab3",
+        "source_row": 14,
+        "raw": {
+          "review_id": "S13",
+          "title": "[模拟] 模糊的不适合",
+          "text": "回声 AF4 不太适合我的做饭习惯，我已经退货。我没有记录具体食谱和原因，不能说是容量、功能还是成品效果的问题。",
+          "rating": "2",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "6b99a6b9eb8d77e788dbd1fa83ffd1055c793c2ef192a141e86e29a9bcfb39f0"
+      },
+      {
+        "id": "0221a68aa09543bfb8c7e04bc56aefc4",
+        "source_row": 15,
+        "raw": {
+          "review_id": "S14",
+          "title": "[模拟] 预热慢但成品好",
+          "text": "用回声 AF4 烤蔬菜时，我觉得预热等得有点久；烤出来的蔬菜口感很好。能最终升温只是这段经历的过程，不是我额外称赞它的地方。清洗炸篮比我预想的省事。",
+          "rating": "4",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "e07909ce06b332577a3d950f8b19ad24b98ef8f17d863a9e1906e804a14c6317"
+      },
+      {
+        "id": "f53ffa12257047a68984d8d1b653034e",
+        "source_row": 16,
+        "raw": {
+          "review_id": "S15",
+          "title": "[模拟] 价格与继续购买意向",
+          "text": "回声 AF4 是我打折买的。用了两周，我觉得这次价格对应的操作便利和酥脆效果很值，愿意推荐给做一两人餐的朋友。是否再次购买还没有决定。",
+          "rating": "5",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "19f79c0e1cc7f2a4e7062586e3fde0159efd70de1259727fc014832cc436b7ed"
+      },
+      {
+        "id": "60f2425902e148b2b46ffab740e644f4",
+        "source_row": 17,
+        "raw": {
+          "review_id": "S16",
+          "title": "[模拟] 操作清洁和比较对象",
+          "text": "做回声 AF4 的一人份晚饭时，设置很直观，完成得比我以往用烤箱快，炸篮也容易清洗。这是与我的旧烤箱和做饭方式比较，不代表所有食谱都更快。",
+          "rating": "5",
+          "date": "",
+          "product_model": "回声 AF4（虚构产品）",
+          "source": "项目自编模拟评论 · 非真实消费者",
+          "verified_purchase": "",
+          "incentivized": "",
+          "data_kind": "synthetic_demo"
+        },
+        "sha256": "20d8024d117a5cb616d288c23e628a6027a13f9b64dbba3eb5ccebe3ce875889"
+      }
+    ],
+    "duplicates": [],
+    "skipped_empty_rows": [],
+    "columns": [
+      "review_id",
+      "title",
+      "text",
+      "rating",
+      "date",
+      "product_model",
+      "source",
+      "verified_purchase",
+      "incentivized",
+      "data_kind"
+    ],
+    "provenance": {
+      "usage_scope": "synthetic_demo_public",
+      "data_kind": "synthetic_demo",
+      "not_real_consumers": true,
+      "public_display": "project-authored fictional content",
+      "source": "Project authored with Codex assistance"
+    }
+  },
+  "run": {
+    "id": "f76e7b015acb4d2783bf424e49450792",
+    "dataset_id": "dca211d088f24e319969459bcc4e8e1a",
+    "product": "回声 AF4（虚构产品）",
+    "created_at": "2026-10-17T17:47:21.051247+00:00",
+    "status": "completed",
+    "model": "gpt-5.6-sol",
+    "prompt_version": "2.0-taxonomy-neutral-context",
+    "review_ids": [
+      "010fef5d08bc465e9295aa0a860d8352",
+      "9fbe13e705ee499fb820d822fdf9152d",
+      "dbdef11a4c994b019642042498ef1571",
+      "cc3e820e3fac45a4ab023c2c3470a3ba",
+      "28c6500b4be44542bdfcf2a29185c24c",
+      "3e40c15e50b0459c98f59d6c9f93e4ee",
+      "642e71c3d01a482487aef760911af754",
+      "972d1cae3d984308ae265b519681437c",
+      "f6d89cc2b4634cf29257d49015228f8e",
+      "0b720464171f4352b7776469a0541a40",
+      "c0a011c5eb7d43d4a93696319df7fd37",
+      "cbc40b0c6e5b4d6ab08c3ce495f96a16",
+      "7872b5aeeb474b019755002fea275ab3",
+      "0221a68aa09543bfb8c7e04bc56aefc4",
+      "f53ffa12257047a68984d8d1b653034e",
+      "60f2425902e148b2b46ffab740e644f4"
+    ],
+    "trial_review_ids": [],
+    "target_review_ids": [
+      "010fef5d08bc465e9295aa0a860d8352",
+      "9fbe13e705ee499fb820d822fdf9152d",
+      "dbdef11a4c994b019642042498ef1571",
+      "cc3e820e3fac45a4ab023c2c3470a3ba",
+      "28c6500b4be44542bdfcf2a29185c24c",
+      "3e40c15e50b0459c98f59d6c9f93e4ee",
+      "642e71c3d01a482487aef760911af754",
+      "972d1cae3d984308ae265b519681437c",
+      "f6d89cc2b4634cf29257d49015228f8e",
+      "0b720464171f4352b7776469a0541a40",
+      "c0a011c5eb7d43d4a93696319df7fd37",
+      "cbc40b0c6e5b4d6ab08c3ce495f96a16",
+      "7872b5aeeb474b019755002fea275ab3",
+      "0221a68aa09543bfb8c7e04bc56aefc4",
+      "f53ffa12257047a68984d8d1b653034e",
+      "60f2425902e148b2b46ffab740e644f4"
+    ],
+    "edits": [],
+    "human_reviews": [],
+    "phase": "complete",
+    "workflow": "daily_batch_v1",
+    "source_run_id": "808868e275fb4c31898dea68da87c070",
+    "auxiliary_requests": [],
+    "results": [
+      {
+        "review_id": "9fbe13e705ee499fb820d822fdf9152d",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者实际使用三周，认为炸篮内壁冲洗即可干净，日常清洁总体省事。",
+              "confidence": "高",
+              "evidence": "炸篮内壁一冲就干净，日常清洁总体省事",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cleaning",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "使用这台回声 AF4 后清洁炸篮内壁。",
+              "subject": "本产品",
+              "theme_key": "clean-ease",
+              "topic": "清洁便利",
+              "id": "b71a85e42c884c8caf11c75feccab1f5"
+            },
+            {
+              "claim": "评论者表示把手根部的接缝容易积油，需要用小刷子清理。",
+              "confidence": "高",
+              "evidence": "把手根部的接缝容易积油，用小刷子才能清理",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cleaning",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "清理这台回声 AF4 的把手根部接缝。",
+              "subject": "本产品",
+              "theme_key": "handle-seam-cleaning",
+              "topic": "把手根部接缝清洁",
+              "id": "e40870bbb4634f8f8c254762dc118987"
+            }
+          ],
+          "review_note": "评论明确说明使用了三周，并分别评价了炸篮内壁的清洁便利和把手根部接缝的清理情况。",
+          "uncertainties": []
+        },
+        "raw_sha256": "70e7ec303be7d6d2d17dc2882326f3c3be421f20f5bef1e66f1fb7059a302656"
+      },
+      {
+        "review_id": "dbdef11a4c994b019642042498ef1571",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "实际运行声音比购买前预想的小，未达到像吹风机一样响的程度。",
+              "confidence": "高",
+              "evidence": "实际运行声音比我预想的小",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "environment",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "购买前曾预期声音会像吹风机一样响，实际运行后进行比较。",
+              "subject": "本产品",
+              "theme_key": "running-noise",
+              "topic": "运行噪音",
+              "id": "2e5e36e10f8a4a5e9bbff1c85fab65c6"
+            },
+            {
+              "claim": "做薯条时仍能听见风扇，评论者没有认为设备完全安静。",
+              "confidence": "高",
+              "evidence": "做薯条时我仍然能听见风扇，没有觉得它完全安静",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "environment",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "制作薯条期间。",
+              "subject": "本产品",
+              "theme_key": "running-noise",
+              "topic": "运行噪音",
+              "id": "16fde0f651d846729314bb82daf4bafe"
+            },
+            {
+              "claim": "制作出的薯条很脆。",
+              "confidence": "高",
+              "evidence": "薯条做出来很脆",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "制作薯条后。",
+              "subject": "本产品",
+              "theme_key": "crispness",
+              "topic": "酥脆表现",
+              "id": "53dc3d461efd497a99552e729da24fd5"
+            }
+          ],
+          "review_note": "评论明确提及运行噪音与薯条酥脆表现；“并非完全安静”未明确表达为负面评价，因此按中立事实记录。",
+          "uncertainties": [
+            {
+              "evidence": "没有觉得它完全安静",
+              "evidence_field": "text",
+              "question": "评论者是否将仍能听见风扇视为产品缺点？",
+              "reason": "该表述说明设备并非完全无声，但原文未明确表达不满或认为噪音过大。"
+            }
+          ]
+        },
+        "raw_sha256": "e63e13526a1795cfa59d973fb76478335220086e8a80834f215de21016097e43"
+      },
+      {
+        "review_id": "010fef5d08bc465e9295aa0a860d8352",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者在两个人吃饭的场景下使用回声 AF4 做鸡翅。",
+              "confidence": "高",
+              "evidence": "两个人吃饭时",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "使用背景",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "两个人吃饭时",
+              "subject": "本产品",
+              "theme_key": "dining-context",
+              "topic": "用餐人数背景",
+              "id": "7a9caf16a2b74f89b39437bef0891beb"
+            },
+            {
+              "claim": "回声 AF4 的温度和时间设置容易操作。",
+              "confidence": "高",
+              "evidence": "设置温度和时间很容易",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "usability",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "用回声 AF4 做鸡翅时",
+              "subject": "本产品",
+              "theme_key": "operation-ease",
+              "topic": "操作便捷性",
+              "id": "505e279a34e04ede9108d0f672d008c3"
+            },
+            {
+              "claim": "用回声 AF4 制作的鸡翅外皮酥脆。",
+              "confidence": "高",
+              "evidence": "鸡翅外皮酥脆",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "用回声 AF4 做鸡翅时",
+              "subject": "本产品",
+              "theme_key": "crispness",
+              "topic": "酥脆表现",
+              "id": "04c5aeef070f4c7ab6b1c8c7d37a85b1"
+            },
+            {
+              "claim": "用回声 AF4 制作的鸡翅内部没有变干。",
+              "confidence": "高",
+              "evidence": "里面没有变干",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "用回声 AF4 做鸡翅时",
+              "subject": "本产品",
+              "theme_key": "air-fry-results",
+              "topic": "空气炸效果",
+              "id": "6799eff17bd84d7a91d63be869147cd4"
+            },
+            {
+              "claim": "回声 AF4 的炸篮放温后清洗很省事。",
+              "confidence": "高",
+              "evidence": "炸篮放温后清洗也很省事",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cleaning",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "炸篮放温后",
+              "subject": "本产品",
+              "theme_key": "clean-ease",
+              "topic": "清洁便利",
+              "id": "06d608c7f7594f9b8e93a1014e37c0a2"
+            },
+            {
+              "claim": "评论标题将使用该产品做晚饭概括为更省事。",
+              "confidence": "高",
+              "evidence": "晚饭更省事",
+              "evidence_field": "title",
+              "experience": "实际经历",
+              "feedback_kind": "整体评价",
+              "major_category": "usability",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "做晚饭时",
+              "subject": "本产品",
+              "theme_key": "operation-ease",
+              "topic": "晚餐使用便利性整体评价",
+              "id": "565070e19965471982c9c850274700e0"
+            }
+          ],
+          "review_note": "",
+          "uncertainties": []
+        },
+        "raw_sha256": "7144f92bc377481ca8db58ff2320b04eb45ddfe67352e5b2c9286970ad03d8e2"
+      },
+      {
+        "review_id": "28c6500b4be44542bdfcf2a29185c24c",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "回声 AF4 的炸篮装不下三人晚饭所需的全部鸡块，需要分两次制作，评论者认为容量太小。",
+              "confidence": "高",
+              "evidence": "回声 AF4 的炸篮装不下全部鸡块，要分两次做，我觉得容量太小",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "capacity",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "三个人的晚饭",
+              "subject": "本产品",
+              "theme_key": "portion-capacity",
+              "topic": "人数与容量匹配",
+              "id": "e68261c3e2f548eab0a3128c5d303456"
+            },
+            {
+              "claim": "按钮容易理解。",
+              "confidence": "高",
+              "evidence": "按钮好理解",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "usability",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "未说明",
+              "subject": "本产品",
+              "theme_key": "operation-ease",
+              "topic": "操作便捷性",
+              "id": "25da301ea94540898cae8eb4dacb1a41"
+            },
+            {
+              "claim": "因鸡块需分两次制作，这次晚饭花的时间更长。",
+              "confidence": "高",
+              "evidence": "分批让这次晚饭花的时间更长",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "三个人的晚饭；鸡块分两次制作",
+              "subject": "本产品",
+              "theme_key": "cooking-speed",
+              "topic": "烹饪耗时",
+              "id": "1c3b5b32c4b24d5395f0ad0c4c68230b"
+            }
+          ],
+          "review_note": "",
+          "uncertainties": []
+        },
+        "raw_sha256": "2f4e5e810870ac72b1ba94e88ce565524dea0ae1e3a4151aef8f7ba57b1a798b"
+      },
+      {
+        "review_id": "cc3e820e3fac45a4ab023c2c3470a3ba",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者实际使用本产品的空气炸模式时，认为风扇声偏大，并会在晚间厨房做饭时打断其收听播客。",
+              "confidence": "高",
+              "evidence": "回声 AF4 用空气炸模式运行时，我觉得风扇声偏大，晚上在厨房做饭会打断我听播客。",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "environment",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "空气炸模式运行且晚上在厨房做饭时",
+              "subject": "本产品",
+              "theme_key": "running-noise",
+              "topic": "运行噪音",
+              "id": "ecd7a8b2d01943899dfbf98f4770a7b1"
+            },
+            {
+              "claim": "评论者认为本产品做出的食物效果不错，但未具体说明是哪项烹饪表现。",
+              "confidence": "中",
+              "evidence": "食物做得不错",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "使用本产品烹饪食物时",
+              "subject": "本产品",
+              "theme_key": "air-fry-results",
+              "topic": "空气炸效果",
+              "id": "929d3e29b5b5462a9aa56476d8bb8e8b"
+            },
+            {
+              "claim": "评论者表示目前仍在继续使用本产品。",
+              "confidence": "高",
+              "evidence": "我还在继续使用",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "行为或意向",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "评论发表时",
+              "subject": "本产品",
+              "theme_key": "continued-use",
+              "topic": "持续使用行为",
+              "id": "a686ca37ca054efe998f51cda2caf15d"
+            }
+          ],
+          "review_note": "提取到本产品运行噪音的负面体验、食物效果的概括性正面评价，以及继续使用行为。评论未确定噪音是否属于个体异常。",
+          "uncertainties": [
+            {
+              "evidence": "我没有和旧机器做过同场对比，也不知道是不是个体异常。",
+              "evidence_field": "text",
+              "question": "该产品的风扇声是否确实异常或显著高于其他机器？",
+              "reason": "评论者未进行同场对比，也无法判断是否为个体异常，因此不能据此确认异常程度或普遍性。"
+            }
+          ]
+        },
+        "raw_sha256": "0edfc92e66aa17daaeb3dc387e1c1a2d982311bc2e58933b25af0ffbec481796"
+      },
+      {
+        "review_id": "642e71c3d01a482487aef760911af754",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者说明家中有两个人，作为使用背景。",
+              "confidence": "高",
+              "evidence": "我们家两个人。",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "使用背景",
+              "major_category": "capacity",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "家中两个人。",
+              "subject": "本产品",
+              "theme_key": "portion-capacity",
+              "topic": "使用人数背景",
+              "id": "dec53dcf1f47400c924ee815f1447717"
+            },
+            {
+              "claim": "回声 AF4 放在厨房台面上使用。",
+              "confidence": "高",
+              "evidence": "回声 AF4 放在厨房台面上",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "使用背景",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "放在厨房台面上。",
+              "subject": "本产品",
+              "theme_key": "countertop-placement",
+              "topic": "放置位置",
+              "id": "fcb43d55d22a4164a7e0cdc0f9b43915"
+            },
+            {
+              "claim": "评论者在周末使用回声 AF4。",
+              "confidence": "高",
+              "evidence": "周末使用",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "使用背景",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "周末使用。",
+              "subject": "本产品",
+              "theme_key": "weekend-use",
+              "topic": "使用时间",
+              "id": "45d62994d08744a295a95ce78828d585"
+            },
+            {
+              "claim": "评论者用回声 AF4 做过薯条和鸡翅，并用复热模式加热过面包；评论未评价效果好坏。",
+              "confidence": "高",
+              "evidence": "到目前为止做过薯条和鸡翅，也用复热模式加热过面包。这些只是使用记录，我没有评价效果好坏。",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "用途描述",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "做过薯条和鸡翅，也用复热模式加热过面包。",
+              "subject": "本产品",
+              "theme_key": "cooking-use-record",
+              "topic": "烹饪用途记录及效果评价限定",
+              "id": "cd06027fe62747bc85090a25e556e1d7"
+            }
+          ],
+          "review_note": "评论明确表示所列内容只是使用记录，没有评价效果好坏；仅提取使用人数、放置位置、使用时间和已尝试用途，不推断产品表现。",
+          "uncertainties": []
+        },
+        "raw_sha256": "d64ba6848d748dcd8a64233f938a203bdbebc5e8c8ec496dd66bc43a21ee7581"
+      },
+      {
+        "review_id": "3e40c15e50b0459c98f59d6c9f93e4ee",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "回声 AF4 的容量适合两个人的一餐，烹饪红薯和鸡翅时无需分批。",
+              "confidence": "高",
+              "evidence": "我实际做过两个人的红薯和鸡翅，回声 AF4 的容量刚好满足这一餐，不用分批。",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "capacity",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "两个人食用红薯和鸡翅的一餐",
+              "subject": "本产品",
+              "theme_key": "portion-capacity",
+              "topic": "人数与容量匹配",
+              "id": "37561cf254624bd3ad5475eedb68df86"
+            },
+            {
+              "claim": "回声 AF4 放在台面角落后仍保留备餐空间，占地适合该使用场景。",
+              "confidence": "高",
+              "evidence": "机身放在台面角落后还有备餐空间，我觉得占地很合适。",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "capacity",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "将机身放在台面角落使用",
+              "subject": "本产品",
+              "theme_key": "countertop-footprint",
+              "topic": "台面占地与空间适配",
+              "id": "ce1767a05ee24ec09b9a13999b05ef58"
+            }
+          ],
+          "review_note": "评论明确肯定了两人份容量和台面空间适配性。",
+          "uncertainties": []
+        },
+        "raw_sha256": "9fd4651e9edddfafe2bb64e74d1143acdb56ea9f805eab9feb3dd2755a850582"
+      },
+      {
+        "review_id": "972d1cae3d984308ae265b519681437c",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者希望回声 AF4 以后容易清洗。",
+              "confidence": "高",
+              "evidence": "我希望它容易清洗",
+              "evidence_field": "text",
+              "experience": "用户期望",
+              "feedback_kind": "产品反馈",
+              "major_category": "cleaning",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "未来使用回声 AF4 时",
+              "subject": "本产品",
+              "theme_key": "clean-ease",
+              "topic": "清洁便利",
+              "id": "d8f0d145b10c421c8ca7c467dcc8b755"
+            },
+            {
+              "claim": "评论者期待回声 AF4 以后能更快做好工作日晚饭。",
+              "confidence": "高",
+              "evidence": "也期待以后能更快做好工作日晚饭",
+              "evidence_field": "text",
+              "experience": "用户期望",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "未来制作工作日晚饭时",
+              "subject": "本产品",
+              "theme_key": "cooking-speed",
+              "topic": "烹饪速度",
+              "id": "7c3ab70dc4dc4bbe818c7ae7fab3945d"
+            },
+            {
+              "claim": "朋友转述其家中的另一款炸锅不错，但这不是评论者对回声 AF4 的使用体验。",
+              "confidence": "高",
+              "evidence": "朋友说他家的另一款炸锅不错，但这不是我对回声 AF4 的使用体验",
+              "evidence_field": "text",
+              "experience": "转述",
+              "feedback_kind": "整体评价",
+              "major_category": "other",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "朋友家使用另一款炸锅的情况",
+              "subject": "其他产品",
+              "theme_key": "other-product-overall",
+              "topic": "其他产品整体评价",
+              "id": "a6e6c1eec8174ec8b64f6fc052e75ab9"
+            }
+          ],
+          "review_note": "本产品尚未通电，评论仅表达对清洁便利和烹饪速度的未来期待；关于另一款炸锅的正面说法属于朋友转述，不是回声 AF4 的使用体验。",
+          "uncertainties": [
+            {
+              "evidence": "更快做好工作日晚饭",
+              "evidence_field": "text",
+              "question": "评论者所说的“更快”是相对于何种烹饪方式或时间基准？",
+              "reason": "原文表达了对烹饪速度的期待，但未说明比较基准，也未提供实际烹饪结果。"
+            },
+            {
+              "evidence": "我希望它容易清洗",
+              "evidence_field": "text",
+              "question": "回声 AF4 实际使用后的清洁难度是否符合期待？",
+              "reason": "评论者明确表示尚未通电，因此无法判断实际清洁表现。"
+            }
+          ]
+        },
+        "raw_sha256": "42b5f0113a70e24b7b76570c3c85e53a9c5b899ec21f9416f9518f2b8ae3ef88"
+      },
+      {
+        "review_id": "0b720464171f4352b7776469a0541a40",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "炸篮推到底后仍不能正常闭合，重新取放两次后问题仍然存在，因此未开始烹饪。",
+              "confidence": "高",
+              "evidence": "这台回声 AF4 的炸篮推到底后仍不能正常闭合，我因此没有开始烹饪。重新取放两次也一样。",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "reliability",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "推入炸篮并重新取放时",
+              "subject": "本产品",
+              "theme_key": "closure",
+              "topic": "炸篮闭合",
+              "id": "c170fdca9b134213b9f32f15b609bf38"
+            },
+            {
+              "claim": "评论者已经申请换货，但未说明换货是否完成。",
+              "confidence": "高",
+              "evidence": "我已经申请换货",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "行为或意向",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "发生闭合问题后",
+              "subject": "本产品",
+              "theme_key": "exchange-request",
+              "topic": "换货申请",
+              "id": "bcc722511a7c45d691ebbc19d4812cc4"
+            }
+          ],
+          "review_note": "评论明确报告了本产品炸篮无法正常闭合，并说明因此未开始烹饪；同时记录了已申请换货，但未说明换货已经完成。",
+          "uncertainties": [
+            {
+              "evidence": "目前还不知道是安装方式还是这台机器的问题",
+              "evidence_field": "text",
+              "question": "闭合异常的具体原因是什么？",
+              "reason": "原文明确表示尚不知道问题源于安装方式还是机器本身，无法进一步归因。"
+            }
+          ]
+        },
+        "raw_sha256": "94fad0730a727ab8c3693932f86f01e52ed1e435d0996d96825c6dd88d99063e"
+      },
+      {
+        "review_id": "f6d89cc2b4634cf29257d49015228f8e",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "用户担心回声 AF4 工作时外壳会烫手，但尚未触摸运行中的外壳，也未发生烫伤。",
+              "confidence": "高",
+              "evidence": "我还没用回声 AF4。家里有孩子，我担心工作时外壳会烫手，但没有摸过运行中的外壳，也没有发生烫伤。",
+              "evidence_field": "text",
+              "experience": "担心",
+              "feedback_kind": "产品反馈",
+              "major_category": "environment",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "家里有孩子，担心产品工作时外壳温度过高。",
+              "subject": "本产品",
+              "theme_key": "外壳温度",
+              "topic": "外壳温度",
+              "id": "5d3843808dcf4afa966eba9f9e8b2b90"
+            },
+            {
+              "claim": "用户希望确认产品摆放和使用时的注意事项。",
+              "confidence": "高",
+              "evidence": "我想先确认摆放和使用时应该注意什么。",
+              "evidence_field": "text",
+              "experience": "用户期望",
+              "feedback_kind": "行为或意向",
+              "major_category": "usability",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "尚未使用产品，计划在摆放和使用前确认注意事项。",
+              "subject": "本产品",
+              "theme_key": "使用注意事项",
+              "topic": "摆放与使用注意事项",
+              "id": "05b82daaead74adabe993eafb13a0ad4"
+            }
+          ],
+          "review_note": "评论者明确表示尚未使用回声 AF4；外壳温度是尚未验证的担忧，不能视为已发生的烫手或烫伤问题。",
+          "uncertainties": [
+            {
+              "evidence": "担心工作时外壳会烫手",
+              "evidence_field": "text",
+              "question": "回声 AF4 运行时外壳是否实际会烫手？",
+              "reason": "评论者明确表示没有摸过运行中的外壳，当前只有担忧，缺乏实际体验验证。"
+            },
+            {
+              "evidence": "摆放和使用时应该注意什么",
+              "evidence_field": "text",
+              "question": "评论者具体需要确认哪些摆放或使用注意事项？",
+              "reason": "原文表达了确认需求，但未说明具体关注的摆放位置、距离或操作事项。"
+            }
+          ]
+        },
+        "raw_sha256": "5b42e76c0b5ef93f808bc01fd44a4f8cddc001158f7aa0afd3798e2b1c9ef5ed"
+      },
+      {
+        "review_id": "cbc40b0c6e5b4d6ab08c3ce495f96a16",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "作者表示本产品清洗方便。",
+              "confidence": "高",
+              "evidence": "洗起来方便",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cleaning",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "本产品刚使用两次后，作者评价清洗方便。",
+              "subject": "本产品",
+              "theme_key": "clean-ease",
+              "topic": "清洁便利",
+              "id": "b5eaf154dd9d450080119fd2466bd13a"
+            },
+            {
+              "claim": "作者说明旧机涂层脱落并非本产品发生的问题。",
+              "confidence": "高",
+              "evidence": "旧机脱落的涂层不是这台机器的",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "使用背景",
+              "major_category": "reliability",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "作者提及旧机涂层脱落，并明确与本产品区分。",
+              "subject": "其他产品",
+              "theme_key": "old-unit-incident",
+              "topic": "旧机涂层脱落",
+              "id": "925d12a15a6f4fac8cb042bf817f67e6"
+            }
+          ],
+          "review_note": "作者提到更换产品前的其他品牌旧机涂层脱落，并明确说明这不是本产品的问题；本产品刚使用两次，清洁评价为正面，长期耐用性尚无法判断。",
+          "uncertainties": [
+            {
+              "evidence": "暂时看不出长期耐用性",
+              "evidence_field": "text",
+              "question": "本产品长期使用后的耐用性如何？",
+              "reason": "评论明确表示使用时间尚短，无法据此判断长期耐用性。"
+            }
+          ]
+        },
+        "raw_sha256": "b87ae655c02029eb44aed23b8bbd2cd2aa5402c886f91a4758245e1908fc23d3"
+      },
+      {
+        "review_id": "c0a011c5eb7d43d4a93696319df7fd37",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "使用包装建议的时间和温度制作薄鸡胸肉时，成品明显偏干，影响口感。",
+              "confidence": "高",
+              "evidence": "第一次用回声 AF4 做薄鸡胸肉，我用了包装建议的时间和温度，成品明显偏干，影响口感。",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "首次使用回声 AF4 烹饪薄鸡胸肉，采用包装建议的时间和温度。",
+              "subject": "本产品",
+              "theme_key": "air-fry-results",
+              "topic": "空气炸效果",
+              "id": "8b155e0e8ae841809e154d7a95d5125a"
+            }
+          ],
+          "review_note": "评论者报告首次使用本产品按包装建议参数烹饪薄鸡胸肉后成品偏干，但未复试，且未称食材重量或测量实际温度，因此原因无法确定。",
+          "uncertainties": [
+            {
+              "evidence": "没有称食材重量，也没有测实际温度。我还没有调整参数复试，不能确定原因。",
+              "evidence_field": "text",
+              "question": "成品偏干的具体原因是什么？",
+              "reason": "原文未提供食材重量、实际温度，也未进行调整参数后的复试，无法确定是参数、食材条件或其他因素导致。"
+            }
+          ]
+        },
+        "raw_sha256": "fbfeb287c5ccb753b9bba0001ece8302abbdad4f9ce78ba8aca340cb081b4c58"
+      },
+      {
+        "review_id": "0221a68aa09543bfb8c7e04bc56aefc4",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "烤蔬菜时，评论者觉得预热等待时间有点久。",
+              "confidence": "高",
+              "evidence": "用回声 AF4 烤蔬菜时，我觉得预热等得有点久",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "用回声 AF4 烤蔬菜时",
+              "subject": "本产品",
+              "theme_key": "preheat-start",
+              "topic": "预热与启动表现",
+              "id": "074ef75fcfd24ba686e53a958f02a048"
+            },
+            {
+              "claim": "评论者认为烤出的蔬菜口感很好。",
+              "confidence": "高",
+              "evidence": "烤出来的蔬菜口感很好",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "烤蔬菜",
+              "subject": "本产品",
+              "theme_key": "air-fry-results",
+              "topic": "烤蔬菜成品口感",
+              "id": "0559566aaacf4919bc2d253c3b71f6ce"
+            },
+            {
+              "claim": "评论者觉得清洗炸篮比预想的省事。",
+              "confidence": "高",
+              "evidence": "清洗炸篮比我预想的省事",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cleaning",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "清洗炸篮",
+              "subject": "本产品",
+              "theme_key": "clean-ease",
+              "topic": "炸篮清洁便利",
+              "id": "aa2ceff88c144c16a6f5a6ac50175222"
+            }
+          ],
+          "review_note": "",
+          "uncertainties": []
+        },
+        "raw_sha256": "e07909ce06b332577a3d950f8b19ad24b98ef8f17d863a9e1906e804a14c6317"
+      },
+      {
+        "review_id": "7872b5aeeb474b019755002fea275ab3",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者认为回声 AF4 不太适合自己的做饭习惯，但未明确具体不适合之处。",
+              "confidence": "高",
+              "evidence": "不太适合我的做饭习惯",
+              "evidence_field": "text",
+              "experience": "无法判断",
+              "feedback_kind": "产品反馈",
+              "major_category": "other",
+              "polarity": "槽点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "评论者认为该产品与自己的做饭习惯不匹配，具体原因未说明。",
+              "subject": "本产品",
+              "theme_key": "cooking-fit",
+              "topic": "烹饪方式适配",
+              "id": "5de70f92d8a04e4e961a486db3594ccd"
+            },
+            {
+              "claim": "评论者已经退货。",
+              "confidence": "高",
+              "evidence": "我已经退货",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "行为或意向",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "评论者已对该产品采取退货行为。",
+              "subject": "本产品",
+              "theme_key": "return-behavior",
+              "topic": "退货行为",
+              "id": "e2e07d7aca1e4bfcb21a143b11b8c400"
+            }
+          ],
+          "review_note": "评论明确表达了与个人做饭习惯不适配并已退货，但未记录具体食谱，也无法确定问题属于容量、功能还是成品效果。",
+          "uncertainties": [
+            {
+              "evidence": "不能说是容量、功能还是成品效果的问题",
+              "evidence_field": "text",
+              "question": "不适合做饭习惯的具体原因是什么？",
+              "reason": "原文明确表示无法确定是容量、功能还是成品效果问题。"
+            }
+          ]
+        },
+        "raw_sha256": "6b99a6b9eb8d77e788dbd1fa83ffd1055c793c2ef192a141e86e29a9bcfb39f0"
+      },
+      {
+        "review_id": "60f2425902e148b2b46ffab740e644f4",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者认为回声 AF4 设置直观，操作便利。",
+              "confidence": "高",
+              "evidence": "设置很直观",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "usability",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "做回声 AF4 的一人份晚饭时",
+              "subject": "本产品",
+              "theme_key": "operation-ease",
+              "topic": "操作便捷性",
+              "id": "e848e82025ec48e8829d20ac5999acab"
+            },
+            {
+              "claim": "评论者表示回声 AF4 完成一人份晚饭比其以往使用的旧烤箱快，并限定这是与旧烤箱和其做饭方式的比较，不代表所有食谱都更快。",
+              "confidence": "高",
+              "evidence": "完成得比我以往用烤箱快，",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "做回声 AF4 的一人份晚饭；比较对象是评论者以往使用的烤箱和其做饭方式，且不代表所有食谱都更快。",
+              "subject": "本产品",
+              "theme_key": "cooking-speed",
+              "topic": "烹饪速度",
+              "id": "f31f6dff8dc14141a8eec499e1cf7b53"
+            },
+            {
+              "claim": "评论者认为炸篮容易清洗。",
+              "confidence": "高",
+              "evidence": "炸篮也容易清洗",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cleaning",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "做回声 AF4 的一人份晚饭后",
+              "subject": "本产品",
+              "theme_key": "clean-ease",
+              "topic": "清洁便利",
+              "id": "6dad99aa8c4c4ae6a82277caf8a48b11"
+            }
+          ],
+          "review_note": "提取了设置直观、与旧烤箱及个人做饭方式相比完成更快、炸篮易清洗三个具体正面反馈；速度比较有明确适用范围限定。",
+          "uncertainties": []
+        },
+        "raw_sha256": "20d8024d117a5cb616d288c23e628a6027a13f9b64dbba3eb5ccebe3ce875889"
+      },
+      {
+        "review_id": "f53ffa12257047a68984d8d1b653034e",
+        "status": "completed",
+        "analysis": {
+          "aspects": [
+            {
+              "claim": "评论者认为本产品当前价格对应的操作便利和酥脆效果很值。",
+              "confidence": "高",
+              "evidence": "这次价格对应的操作便利和酥脆效果很值",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "value",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "使用两周后的价格价值评价",
+              "subject": "本产品",
+              "theme_key": "value-money",
+              "topic": "价格价值感",
+              "id": "f8d392c1ee434cb09655b5856db0b1e9"
+            },
+            {
+              "claim": "评论者认可本产品的操作便利。",
+              "confidence": "高",
+              "evidence": "这次价格对应的操作便利和酥脆效果很值",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "usability",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "使用两周后评价日常操作",
+              "subject": "本产品",
+              "theme_key": "operation-ease",
+              "topic": "操作便捷性",
+              "id": "80b1f727d18d4da48bf1d76c1718ddad"
+            },
+            {
+              "claim": "评论者认可本产品的酥脆效果。",
+              "confidence": "高",
+              "evidence": "这次价格对应的操作便利和酥脆效果很值",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "产品反馈",
+              "major_category": "cooking",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "使用两周后的成品效果评价",
+              "subject": "本产品",
+              "theme_key": "crispness",
+              "topic": "酥脆表现",
+              "id": "aeb3462d5bcf4aada9a2873922c7fb50"
+            },
+            {
+              "claim": "评论者愿意将本产品推荐给做一两人餐的朋友。",
+              "confidence": "高",
+              "evidence": "愿意推荐给做一两人餐的朋友",
+              "evidence_field": "text",
+              "experience": "实际经历",
+              "feedback_kind": "行为或意向",
+              "major_category": "other",
+              "polarity": "优点",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "向做一两人餐的朋友进行推荐",
+              "subject": "本产品",
+              "theme_key": "recommendation-intent",
+              "topic": "推荐意向",
+              "id": "d65f33e051ee4404b815808feee6e486"
+            },
+            {
+              "claim": "评论者尚未决定是否再次购买本产品。",
+              "confidence": "高",
+              "evidence": "是否再次购买还没有决定",
+              "evidence_field": "text",
+              "experience": "无法判断",
+              "feedback_kind": "行为或意向",
+              "major_category": "other",
+              "polarity": "中立",
+              "rationale": "",
+              "recommendation": "",
+              "recommendation_kind": "无需建议",
+              "scenario": "未来再次购买决策",
+              "subject": "本产品",
+              "theme_key": "repurchase-intent",
+              "topic": "再次购买意向",
+              "id": "119faa040c84486983a9eaa5ec88cdab"
+            }
+          ],
+          "review_note": "评论者表示使用本产品两周后，认可其价格价值、操作便利和酥脆效果，并愿意推荐给做一两人餐的朋友；是否再次购买尚未决定。",
+          "uncertainties": [
+            {
+              "evidence": "做一两人餐的朋友",
+              "evidence_field": "text",
+              "question": "本产品是否被明确评价为容量适合一两人餐？",
+              "reason": "该片段说明推荐对象的用餐场景，但没有直接评价产品容量或人数匹配，不能据此归类为容量优点。"
+            }
+          ]
+        },
+        "raw_sha256": "19f79c0e1cc7f2a4e7062586e3fde0159efd70de1259727fc014832cc436b7ed"
+      }
+    ]
+  },
+  "generation": {
+    "data_kind": "synthetic_demo",
+    "not_real_consumers": true,
+    "method": "Actual call_model extraction through the same local pipeline, then deterministic theme grouping; no model invocation on website visits",
+    "requested_model": "gpt-5.6-sol",
+    "reported_models": [
+      "gpt-5.6-sol"
+    ],
+    "first16_metrics": {
+      "execution_version": "bounded-batch-1",
+      "concurrency": 2,
+      "effective_concurrency": 2,
+      "max_retries": 1,
+      "started_at": "2026-10-17T17:42:27.263495+00:00",
+      "model_calls": 16,
+      "reused_reviews": 0,
+      "aggregation_builds": 1,
+      "aggregation_seconds": 0.0267,
+      "request_seconds_sum": 283.013,
+      "extraction_wall_seconds": 144.9458,
+      "success": 16,
+      "failed": 0,
+      "unattempted": 0,
+      "request_latency_median_seconds": 16.2875,
+      "request_latency_max_seconds": 35.1751,
+      "total_wall_seconds": 144.9852,
+      "finished_at": "2026-10-17T17:44:52.248084+00:00"
+    },
+    "targeted_repair_metrics": {
+      "concurrency": 1,
+      "model_calls": 2,
+      "reused_reviews": 14,
+      "automatic_retries": 0,
+      "success": 16,
+      "failed": 0,
+      "extraction_wall_seconds": 31.5421,
+      "aggregation_seconds": 0.0277,
+      "total_wall_seconds": 31.5699,
+      "purpose": "Targeted development correction of two omitted behaviors; original16 outputs retained"
+    },
+    "semantic_check": "Development checks only; structural and quote checks do not certify semantic accuracy"
+  }
+}
