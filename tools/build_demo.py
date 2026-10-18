@@ -79,6 +79,7 @@ refreshState().then(async()=>{await selectDataset(state.datasets[0].id);setPage(
 '''
     (docs/'app.js').write_text(source)
     html=(ROOT/'local_app/static/index.html').read_text().replace('href="/style.css"','href="./style.css"').replace('src="/app.js"','src="./app.js"')
+    html=html.replace('<head>',"<head><meta http-equiv=\"Content-Security-Policy\" content=\"default-src 'self'; script-src 'self'; connect-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'none'\">",1)
     html=html.replace('<title>回声 · 消费者反馈分析工作台</title>','<title>回声 · 消费者反馈分析｜模拟数据演示</title><meta name="description" content="面向产品和运营人员的消费者反馈分析作品原型。使用明确标注的模拟评论，展示核心发现、主题、不同评价、行动建议和原文追溯。">')
     start=html.index(' <div class="sidebar-bottom">');end=html.index('\n</aside>',start)
     html=html[:start]+''' <div class="sidebar-bottom"><p class="nav-caption">关于项目</p><nav class="utility-nav"><a href="https://github.com/susie041720/echo-feedback-lab" target="_blank" rel="noopener">↗ 项目代码与说明</a><a href="https://github.com/susie041720/echo-feedback-lab#本地启动" target="_blank" rel="noopener">↗ 本地完整版使用</a></nav><div class="local"><i></i>模拟数据 · 静态演示</div></div>'''+html[end:]
